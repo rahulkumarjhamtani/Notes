@@ -12,6 +12,19 @@ body
     margin-top: 20vh;
     background-color: #a1ffce;
     background: linear-gradient(to right, #a1ffce, #faffd1);
-    padding-top: 5vh;
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.7);
+}
+.notes .tools
+{
+    background-color: rgb(247, 206, 42);
+    padding:12px;
+    text-align: end;
+}
+.notes .tools button
+{
+    outline:none;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    font-size:15px;
 }
