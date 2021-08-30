@@ -1,0 +1,17 @@
+body
+{
+    background: #0f0c29;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    background-size: cover;
+}
+.notes
+{
+    width:30%;
+    height:300px;
+    margin:auto;
+    margin-top: 20vh;
+    background-color: #a1ffce;
+    background: linear-gradient(to right, #a1ffce, #faffd1);
+    padding-top: 5vh;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.7);
+}
