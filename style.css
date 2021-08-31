@@ -34,15 +34,14 @@ body
 }
 .notes textarea
 {
-    width:98.7%;
-    height:81.3%;
+    width:95%;
+    height:79%;
     border:none;
     outline:none;
     background-color: #a1ffce;
     background: linear-gradient(to right, #a1ffce, #faffd1);
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 20px;
-    padding-top:10px;
-    padding-right:0px;
-    padding-left:5px;
+    padding:10px;
+    font-weight: bold;
 }
