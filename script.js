@@ -15,4 +15,9 @@ editbtn.addEventListener('click', () => {
 text.addEventListener('input', (e) => {
     const { value } = e.target;
     main.innerHTML = marked(value);
+    main.style.color = '#bdfcf9';
+    main.style.fontSize = '35px';
+    main.style.padding = '15px';
+    main.style.fontFamily = 'Patrick Hand, cursive';
+    main.style.letterSpacing = '2px';
 });
