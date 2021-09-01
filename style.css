@@ -4,6 +4,28 @@ body
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     background-size: cover;
 }
+.add
+{
+    display: block;
+    margin-top: 5vh;
+    right: 2rem;
+    text-align: center;
+    padding: 5px;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    background-color: rgb(253, 251, 147);
+    color: rgb(12, 0, 41);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s;
+    position: fixed;
+}
+.add:hover
+{
+    background-color: rgb(255, 255, 255);
+
+}
 .notes
 {
     width:400px;
@@ -11,6 +33,7 @@ body
     margin:auto;
     margin-top: 10vh;    
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.7);
+    display: none;
 }
 .notes .tools
 {
