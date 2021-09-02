@@ -18,7 +18,7 @@ function addnewnote() {
         <div class="main hidden">
         </div>
         <textarea></textarea>
-    </div> `;
+    </div>`;
 
     var editbtn = notes.querySelector(".edit");
     var deletebtn = notes.querySelector(".delete");
@@ -47,8 +47,8 @@ function addnewnote() {
         main.style.fontFamily = 'Patrick Hand, cursive';
         main.style.letterSpacing = '2px';
     });
-
-    document.body.appendChild('notes');
+    
+    document.body.appendChild(notes);
 }
 
 
