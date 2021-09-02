@@ -10,7 +10,7 @@ function addnewnote() {
 
     notes.innerHTML = 
     `<div class="notes">
-        <div class="tools">
+        <div class="tools" id="tool">
             <button class="edit"><i class="fas fa-edit"></i></button>
             <button class="delete"><i class="fas fa-trash"></i></button>
             <button class="color"><i class="fas fa-palette"></i></button>
@@ -34,6 +34,11 @@ function addnewnote() {
 
     deletebtn.addEventListener('click', () => {
         notes.remove();
+    });
+
+    colorbtn.addEventListener('click', () => {
+        var randomColor = Math.floor(Math.random()*16777215).toString(16);
+        document.getElementById("tool").style.backgroundColor = "#" + randomColor;
     });
 
 
