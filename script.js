@@ -1,4 +1,4 @@
-var addbtn = document.getElementById("add");
+const addbtn = document.getElementById("add");
 
 addbtn.addEventListener('click', () => {
     addnewnote();
@@ -33,8 +33,7 @@ function addnewnote() {
     });
 
     deletebtn.addEventListener('click', () => {
-        main.classList.toggle('hidden');
-        text.classList.toggle('hidden');
+        notes.remove();
     });
 
 
