@@ -21,3 +21,14 @@ text.addEventListener('input', (e) => {
     main.style.fontFamily = 'Patrick Hand, cursive';
     main.style.letterSpacing = '2px';
 });
+
+{/* <div class="notes">
+    <div class="tools">
+        <button class="edit"><i class="fas fa-edit"></i></button>
+        <button class="delete"><i class="fas fa-trash"></i></button>
+        <button class="color"><i class="fas fa-palette"></i></button>
+    </div>
+    <div class="main hidden">
+    </div>
+    <textarea></textarea>
+</div> */}
