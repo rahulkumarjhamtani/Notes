@@ -42,18 +42,34 @@ function addnewnote() {
     });
 
 
-
     text.addEventListener('input', (e) => {
         const { value } = e.target;
+
         main.innerHTML = marked(value);
+
         main.style.color = '#bdfcf9';
         main.style.fontSize = '35px';
         main.style.padding = '15px';
         main.style.fontFamily = 'Patrick Hand, cursive';
         main.style.letterSpacing = '2px';
+
+        updateLS();
     });
     
+    
+
     document.body.appendChild(notes);
+}
+
+updateLS() {
+    var content = document.querySelectorAll("textarea");
+
+    var cont = [];
+
+    content.forEach(notes => {
+        cont.push(notes.value);
+    });
+
 }
 
 
