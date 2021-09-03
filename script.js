@@ -1,10 +1,19 @@
-const addbtn = document.getElementById("add");
+var addbtn = document.getElementById("add");
+
+var allnote = JSON.parse(localStorage.getItem('allnote'));
+
+if(allnote)
+{
+    cont.forEach(notes => {
+        addnewnote(notes);
+    });
+}
 
 addbtn.addEventListener('click', () => {
     addnewnote();
 });
 
-function addnewnote() {
+function addnewnote(text = "") {
     var notes = document.createElement('div');
     notes.classList.add('notes');
 
@@ -25,11 +34,13 @@ function addnewnote() {
     var colorbtn = notes.querySelector(".color");
 
     var main = notes.querySelector(".main");
-    var text = notes.querySelector("textarea");
+    var textar = notes.querySelector("textarea");
+
+    text.value = text;
 
     editbtn.addEventListener('click', () => {
         main.classList.toggle('hidden');
-        text.classList.toggle('hidden');
+        textar.classList.toggle('hidden');
     });
 
     deletebtn.addEventListener('click', () => {
@@ -42,7 +53,7 @@ function addnewnote() {
     });
 
 
-    text.addEventListener('input', (e) => {
+    textar.addEventListener('input', (e) => {
         const { value } = e.target;
 
         main.innerHTML = marked(value);
@@ -55,13 +66,11 @@ function addnewnote() {
 
         updateLS();
     });
-    
-    
 
     document.body.appendChild(notes);
 }
 
-updateLS() {
+function updateLS() {
     var content = document.querySelectorAll("textarea");
 
     var cont = [];
@@ -70,6 +79,7 @@ updateLS() {
         cont.push(notes.value);
     });
 
+    localStorage.setItem('cont', JSON.stringify(cont));
 }
 
 
