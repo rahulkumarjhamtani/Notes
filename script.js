@@ -1,6 +1,6 @@
 var addbtn = document.getElementById("add");
 
-var allnote = JSON.parse(localStorage.getItem('allnote'));
+const allnote = JSON.parse(localStorage.getItem('allnote'));
 
 if(allnote)
 {
@@ -14,7 +14,7 @@ addbtn.addEventListener('click', () => {
 });
 
 function addnewnote(text = "") {
-    var notes = document.createElement('div');
+    const notes = document.createElement('div');
     notes.classList.add('notes');
 
     notes.innerHTML = 
@@ -37,6 +37,7 @@ function addnewnote(text = "") {
     var textar = notes.querySelector("textarea");
 
     textar.value = text;
+    main.innerHTML = marked(text);
 
     editbtn.addEventListener('click', () => {
         main.classList.toggle('hidden');
@@ -45,6 +46,7 @@ function addnewnote(text = "") {
 
     deletebtn.addEventListener('click', () => {
         notes.remove();
+        updateLS();
     });
 
     colorbtn.addEventListener('click', () => {
@@ -57,13 +59,13 @@ function addnewnote(text = "") {
         const { value } = e.target;
 
         main.innerHTML = marked(value);
-
+        
         main.style.color = '#bdfcf9';
         main.style.fontSize = '35px';
         main.style.padding = '15px';
         main.style.fontFamily = 'Patrick Hand, cursive';
         main.style.letterSpacing = '2px';
-
+        
         updateLS();
     });
 
