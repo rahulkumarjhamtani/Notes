@@ -24,9 +24,9 @@ function addnewnote(text = "") {
             <button class="delete"><i class="fas fa-trash"></i></button>
             <button class="color"><i class="fas fa-palette"></i></button>
         </div>
-        <div class="main hidden">
+        <div class="main ${text ? "" : "hidden"}">
         </div>
-        <textarea></textarea>
+        <textarea class="${text ? "hidden" : ""}"></textarea>
     </div>`;
 
     var editbtn = notes.querySelector(".edit");
