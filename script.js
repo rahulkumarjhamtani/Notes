@@ -33,11 +33,19 @@ function addnewnote(text = "") {
     var deletebtn = notes.querySelector(".delete");
     var colorbtn = notes.querySelector(".color");
 
+    var changecolor = notes.querySelector(".tools");
+
     var main = notes.querySelector(".main");
     var textar = notes.querySelector("textarea");
 
     textar.value = text;
+    
     main.innerHTML = marked(text);
+    main.style.color = '#bdfcf9';
+    main.style.fontSize = '35px';
+    main.style.padding = '15px';
+    main.style.fontFamily = 'Patrick Hand, cursive';
+    main.style.letterSpacing = '2px';
 
     editbtn.addEventListener('click', () => {
         main.classList.toggle('hidden');
@@ -51,7 +59,8 @@ function addnewnote(text = "") {
 
     colorbtn.addEventListener('click', () => {
         var randomColor = Math.floor(Math.random()*16777215).toString(16);
-        document.getElementById("tool").style.backgroundColor = "#" + randomColor;
+        // document.getElementById("tool").style.backgroundColor = "#" + randomColor;
+        changecolor.style.backgroundColor = "#" + randomColor;
     });
 
 
@@ -59,13 +68,7 @@ function addnewnote(text = "") {
         const { value } = e.target;
 
         main.innerHTML = marked(value);
-        
-        main.style.color = '#bdfcf9';
-        main.style.fontSize = '35px';
-        main.style.padding = '15px';
-        main.style.fontFamily = 'Patrick Hand, cursive';
-        main.style.letterSpacing = '2px';
-        
+    
         updateLS();
     });
 
