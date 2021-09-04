@@ -4,7 +4,7 @@ var allnote = JSON.parse(localStorage.getItem('allnote'));
 
 if(allnote)
 {
-    cont.forEach(notes => {
+    allnote.forEach(notes => {
         addnewnote(notes);
     });
 }
@@ -36,7 +36,7 @@ function addnewnote(text = "") {
     var main = notes.querySelector(".main");
     var textar = notes.querySelector("textarea");
 
-    text.value = text;
+    textar.value = text;
 
     editbtn.addEventListener('click', () => {
         main.classList.toggle('hidden');
