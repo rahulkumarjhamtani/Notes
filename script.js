@@ -1,6 +1,6 @@
 var addbtn = document.getElementById("add");
 
-const note = JSON.parse(localStorage.getItem('note'));
+var note = JSON.parse(localStorage.getItem('note'));
 
 if(note)
 {
@@ -14,7 +14,7 @@ addbtn.addEventListener('click', () => {
 });
 
 function addnewnote(text = "") {
-    const notes = document.createElement('div');
+    var notes = document.createElement('div');
     notes.classList.add('notes');
 
     notes.innerHTML = 
