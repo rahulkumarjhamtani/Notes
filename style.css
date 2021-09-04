@@ -72,3 +72,11 @@ body
 {
     display: none;
 }
+p
+{
+    color:#bdfcf9;
+    font-size : 35px;
+    padding : 15px;
+    font-family : 'Patrick Hand, cursive';
+    letter-spacing : 2px;
+}

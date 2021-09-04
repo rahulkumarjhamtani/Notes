@@ -1,10 +1,10 @@
 var addbtn = document.getElementById("add");
 
-const allnote = JSON.parse(localStorage.getItem('allnote'));
+const note = JSON.parse(localStorage.getItem('note'));
 
-if(allnote)
+if(note)
 {
-    allnote.forEach(notes => {
+    note.forEach(notes => {
         addnewnote(notes);
     });
 }
@@ -73,15 +73,15 @@ function addnewnote(text = "") {
 }
 
 function updateLS() {
-    var content = document.querySelectorAll("textarea");
+    var content = document.querySelectorAll('textarea');
 
-    var cont = [];
+    var note = [];
 
     content.forEach(notes => {
-        cont.push(notes.value);
+        note.push(notes.value);
     });
 
-    localStorage.setItem('cont', JSON.stringify(cont));
+    localStorage.setItem('note', JSON.stringify(note));
 }
 
 
