@@ -41,7 +41,7 @@ function addnewnote(text = "") {
     textar.value = text;
     
     main.innerHTML = marked(text);
-    main.style.color = '#bdfcf9';
+    main.style.color = 'rgb(214, 211, 253)';
     main.style.fontSize = '35px';
     main.style.padding = '15px';
     main.style.fontFamily = 'Patrick Hand, cursive';
